@@ -1,22 +1,29 @@
 "use strict";
 
- let process;
- 
- 
- do {
- 
- let a = Number(prompt("Введите число"));
- 
- alert(declination(a));
- 
- process = confirm("Продолжим?");
- 
- } while (process);
- 
+let process, a, b;
 
-// функция формирования правильного падежа для слова рубль
+
+do {
+
+    a = Number(prompt("Введите число"));
+
+    b = declination(a);
+
+    alert(`Ваша сумма в ${a} ${b} успешно зачислена.`)
+    
+    process = confirm("Продолжим?");
+
+} while (process);
+
+
+/*  Функция формирования правильного падежа для слова рубль
+ * 
+ *  Все варианты определяются по последним двум или одной 
+ *  цифре нашего числа
+ *  
+*/ 
 function declination(arg) {
-    let result, word;
+    let word;
     let arr = ['рубль', 'рубля', 'рублей'];
 
     let cases = [2, 0, 1, 1, 1];
@@ -35,9 +42,8 @@ function declination(arg) {
     }
 
 
-    result = "Ваша сумма в " + arg + " " + word + " успешно зачислена."
 
-    return result
+    return word;
 }
 
 
@@ -51,7 +57,7 @@ for (let i = 0; i < upperNumber; i++) {
 
     let li = document.createElement('li');
     ul.appendChild(li);
-    li.innerHTML = li.innerHTML + declination(i);
+    li.innerHTML = li.innerHTML + i + " " + declination(i);
 
 
 }

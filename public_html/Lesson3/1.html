@@ -9,7 +9,30 @@
     <body>
         <script>
 
+            "use strict";
             
+            let result,check;
+            
+            for (let i=0;i<11;i++) {
+                
+                check = i%2;
+                
+                if (check == 0 ) {
+                    
+                    if (i == 0 ) {
+                        result = i + "- это ноль";
+                    } else {
+                        result = i + "- четное число";
+                    }
+                    
+                } else {
+                    result = i + "- нечетное число";
+                    
+                }
+                
+                console.log(result);
+                
+            }
         </script>
     </body>
 </html>

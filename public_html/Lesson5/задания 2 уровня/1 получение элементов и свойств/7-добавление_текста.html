@@ -16,7 +16,14 @@
     2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
 
     <script>
+        let a = document.querySelectorAll('a');
         
+        a.forEach(function(item) {
+            if (item.innerText != 'ссылка') {
+                item.innerText= 'ссылка';
+            }
+            
+        });
     </script>
 </body>
 </html>

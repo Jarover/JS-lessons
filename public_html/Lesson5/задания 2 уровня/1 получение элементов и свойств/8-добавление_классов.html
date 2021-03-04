@@ -18,8 +18,17 @@
     класс sign, и если нет, то тогда добавьте с помощью метода add()
     -->
 
-    <script>
+    <script> 
+        let b = document.querySelectorAll('b');  
         
+        b.forEach(function(item) {
+            
+             if (!item.classList.contains("sign")) {
+               
+               item.classList.add("sign");
+            }
+            
+        });        
     </script>
 </body>
 </html>
